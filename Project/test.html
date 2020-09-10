@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <!-- Liên kết CSS Bootstrap -->
+    <link href="vender/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="vender/font-awesome/css/font-awesome.min.css" type="text/css">
+    <!-- Custom css - Các file css do chúng ta tự viết -->
+    <link rel="stylesheet" href="assets/css/index.css" type="text/css">
+    <!-- liên kết Vue -->
+    <script src="vender/vuejs/vue.min.js "></script>
+
+    <style>
+        .grid-container {
+            width: 70%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 20% 20% 20% 20% 20%;
+        }
+        
+        .grid-item {
+            border: 1px solid #000;
+            border-radius: 5px;
+            margin: 5px;
+            padding: 5px;
+            text-align: center;
+        }
+        
+        @media (max-width: 1024px) {
+            .grid-container {
+                width: 100%;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="app">
+        <div class="grid-container">
+            <div class="grid-item" v-for="item in list">
+                <div><img :src="item.img" alt="" style="width: 150px;height: 200px;"></div>
+                <div>{{item.title}}</div>
+                <div>{{item.price}}</div>
+            </div>
+        </div>
+    </div>
+    <!-- Liên kết Jquery -->
+    <script src="vender/jquery/jquery.min.js"></script>
+    <!-- Liên kết PopperJS -->
+    <script src="vender/popperjs/popper.min.js"></script>
+    <!-- Liên kết Bootstrap -->
+    <script src="vender/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Custom script - Các file js do mình tự viết -->
+    <script src="test.js"></script>
+    <script src="assets/js/product.js"></script>
+
+
+</body>
+
+</html>
