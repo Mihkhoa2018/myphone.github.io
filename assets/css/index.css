@@ -243,6 +243,9 @@ footer {
     .container-design {
         width: 100%;
     }
+    .container-footer {
+        width: 100%;
+    }
 }
 
 @media(max-width: 768px) {
@@ -263,6 +266,7 @@ footer {
     }
     .container-footer {
         width: 100%;
+        padding: 0;
     }
 }
 
@@ -276,5 +280,9 @@ footer {
     }
     .banner-top-header {
         display: none;
+    }
+    .banner-mid,
+    .title-sp {
+        margin-top: 5px;
     }
 }
