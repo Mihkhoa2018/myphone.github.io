@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-In</title>
+
+    <!-- Liên kết CSS Bootstrap -->
+    <link href="vender/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Font awesome, Google -->
+    <link rel="stylesheet" href="vender/font-awesome/css/font-awesome.min.css" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Custom css - Các file css do chúng ta tự viết -->
+    <link rel="stylesheet" href="assets/css/index.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/account.css" type="text/css">
+
+    <!-- liên kết Vuejs  -->
+    <script src="vender/vuejs/vue.min.js"></script>
+
+
+</head>
+
+<body>
+
+    <header>
+        <div class="banner-top-header">
+            <a href="#"><img src="assets/img/banner_samsung-3.png" alt="" style="width: 100%;"></a>
+        </div>
+        <div></div>
+        <div class="container-design">
+            <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #cd1818">
+                <a class="navbar-brand" href="index.html">MYPHONE</a>
+                <form class="form-inline my-2 my-lg-0">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Tìm kiếm " aria-describedby="button-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-light" type="button" id="button-addon2">
+                                <i class="fa fa-search" style="font-size:18px"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fa fa-mobile-phone" style="font-size:24px"></i><br />
+                                <span class="title">ĐIỆN THOẠI</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fa fa-tablet" style="font-size:24px"></i><br />
+                                <span class="title">TABLET</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fa fa-laptop" style="font-size:24px"></i><br />
+                                <span class="title">LAPTOP</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fa fa-headphones" style="font-size:24px"></i><br />
+                                <span class="title">PHỤ KIỆN</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fa fa-newspaper-o" style="font-size:24px"></i><br />
+                                <span class="title">TIN TỨC</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fa fa-shopping-cart" style="font-size:24px"></i><br />
+                                <span class="title">GIỎ HÀNG</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fa fa-user-circle-o" style="font-size:24px"></i><br />
+                                <span class="title">TÀI KHOẢN</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section>
+        <div class="account">
+            <div id="signin">
+                <form action="#" method="post" novalidate="true" @submit="Kiemtradulieu">
+                    <div class="title-signin">Đăng Nhập</div>
+                    <div class="md-form input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text " id="material-addon1"><i class="fa fa-user" style="font-size:24px"></i></span>
+                        </div>
+                        <input type="text" class="form-control" id="txtuser" name="txtuser" v-model="user">
+                    </div>
+                    <div class="alert alert-danger" role="alert" v-if="thongbaoloi1()">
+                        <span v-for="error1 in errors1">{{error1}}</span><br />
+                    </div>
+                    <div class="md-form input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="material-addon2"><i class="fa fa-lock" style="font-size:24px"></i></span>
+                        </div>
+                        <input type="text" class="form-control" id="txtpass" name="txtpass" v-model="pass">
+                    </div>
+                    <div class="alert alert-danger" role="alert" v-if="thongbaoloi2()">
+                        <span v-for="error2 in errors2">{{error2}}</span><br />
+                    </div>
+                    <div class="btn-login">
+                        <div>
+                            <button type="submit" class="btn-signin">Đăng Nhập</button>
+                        </div>
+                        <div>
+                            <button type="button" class="btn-signup">Đăng Ký</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container-footer">
+            <div class="col--1">
+                <a href="#"><span>Giới thiệu công ty PYPHONE</span></a><br />
+                <a href="#"><span>Chính sách bảo mật</span></a><br />
+                <div class="thanhtoan">
+                    <i class="fa fa-cc-mastercard" style="font-size:24px"></i>
+                    <i class="fa fa-cc-visa" style="font-size:24px"></i><br />
+                    <img src="assets/img/logoSaleNoti.png" alt="" style="width: 30%;">
+                </div>
+            </div>
+            <div class="col--2">
+                <span>Giọi mua hàng miến phí: 0398423952</span><br />
+                <span>Gọi khiếu nại & bảo hành: 0569645235</span><br />
+                <span>Gọi hợp tác kinh doanh: 113</span>
+                <div class="lienhe">
+                    <a target="_blank" href="https://www.facebook.com/Mihkhoadao"><i class="facebook fa fa-facebook-official" style="font-size:24px"></i>&nbsp;&nbsp;</a>
+                    <a target="_blank" href="https://www.youtube.com/channel/UCEnXcLsYXby3vxZMGx63wlg"><i class="youtube fa fa-youtube-play" style="font-size:24px"></i></a>
+                </div>
+            </div>
+            <div class="col--2">
+                <span><strong>Chi Nhánh:</strong></span><br />
+                <span><strong>Hà Nội:</strong> ở Hà Nội</span><br />
+                <span><strong>TP.HCM:</strong> ở TP HCM</span><br />
+                <span><strong>TP.Cần Thơ:</strong> 30/4, Ninh Kiều, Hưng Lợi, TP Cần Thơ</span>
+            </div>
+        </div>
+    </footer>
+    <div style=" padding: 5px; text-align: center;"><span style="font-size: 12px;">Bản quyền thuộc về MihKhoa</span></div>
+
+    <!-- Liên kết Jquery -->
+    <script src="vender/jquery/jquery.min.js"></script>
+    <!-- Liên kết PopperJS -->
+    <script src="vender/popperjs/popper.min.js"></script>
+    <!-- Liên kết Bootstrap -->
+    <script src="vender/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Custom script - Các file js do mình tự viết -->
+    <script src="assets/js/account.js"></script>
+
+
+
+
+</body>
+
+</html>

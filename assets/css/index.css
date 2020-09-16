@@ -9,7 +9,7 @@ body {
 }
 
 
-/*===== edit header =====*/
+/*===== EDIT HEADER =====*/
 
 header {
     background-color: #cd1818;
@@ -17,7 +17,7 @@ header {
 }
 
 
-/* edit container */
+/* edit container-design */
 
 .container-design {
     width: 75%;
@@ -25,10 +25,14 @@ header {
 }
 
 
-/* edit menungang */
+/* edit navbar */
 
 .navbar {
     padding: 5px 0;
+}
+
+.navbar .navbar-brand {
+    padding-left: 10px;
 }
 
 .navbar-nav {
@@ -37,14 +41,15 @@ header {
 
 .collapse .nav-item {
     margin-left: 10px;
-}
-
-.collapse .nav-link {
     text-align: center;
 }
 
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+}
 
-/* ===== edit section ===== */
+
+/* ===== EDIT SECTION ===== */
 
 section {
     margin-top: 40px;
@@ -79,11 +84,6 @@ section {
     margin-left: 5px;
     border-radius: 5px;
     background-color: white;
-}
-
-.title-1 .tt {
-    font-weight: 500;
-    color: #686868;
 }
 
 
@@ -122,11 +122,16 @@ section {
     font-size: 12px;
 }
 
+.title-1 .tt {
+    font-weight: 500;
+    color: #686868;
+}
 
-/* ===== edit grid-container ===== */
 
-.title-sp {
-    margin-top: 40px;
+/*  edit grid-container */
+
+.container-design .title-sp {
+    margin-top: 20px;
     padding-left: 10px;
     background-color: white;
     color: #ff0000;
@@ -153,7 +158,7 @@ section {
 /* banner mid */
 
 .banner-mid {
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .banner-mid img {
@@ -161,7 +166,7 @@ section {
 }
 
 
-/* chỉnh sửa title-product và price */
+/* edit title-product & price */
 
 .grid-item .title-product {
     font-size: 13px;
@@ -179,14 +184,14 @@ section {
 }
 
 
-/* ======hover======= */
+/* ====== HOVER ======= */
 
 .grid-item:hover {
     border: 1px solid #000;
 }
 
 
-/* edit footer */
+/* ===== EDIT FOOTER ===== */
 
 footer {
     background-color: white;
@@ -205,7 +210,7 @@ footer {
     font-size: 14px;
     text-decoration: none;
     color: #000;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .container-footer .thanhtoan {
@@ -214,7 +219,7 @@ footer {
 
 .container-footer .col--2 span {
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .container-footer .lienhe {
@@ -229,6 +234,9 @@ footer {
 .lienhe .youtube {
     color: red;
 }
+
+
+/* edit feedback */
 
 
 /* edit mesenger */
@@ -249,8 +257,18 @@ footer {
 }
 
 @media(max-width: 768px) {
+    .navbar-nav {
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+    .navbar-nav .nav-item {
+        border: 1px solid #B22222;
+        background-color: #B22222;
+        margin: 2px;
+        border-radius: 5px;
+    }
     .banner-big {
-        display: none;
+        width: 100%;
     }
     .b-b-m {
         display: none;
@@ -271,6 +289,16 @@ footer {
 }
 
 @media (max-width: 426px) {
+    footer {
+        padding-left: 6px;
+    }
+    .navbar .input-group {
+        display: none;
+    }
+    .banner-mid,
+    .title-sp {
+        margin-top: 5px;
+    }
     .grid-container {
         grid-template-columns: 50% 50%;
     }
@@ -280,9 +308,5 @@ footer {
     }
     .banner-top-header {
         display: none;
-    }
-    .banner-mid,
-    .title-sp {
-        margin-top: 5px;
     }
 }
