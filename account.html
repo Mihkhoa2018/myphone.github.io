@@ -37,7 +37,7 @@
                     <div class="input-group">
                         <input type="text" class="form-control" placeholder="Tìm kiếm " aria-describedby="button-addon2">
                         <div class="input-group-append">
-                            <button class="btn btn-outline-light" type="button" id="button-addon2">
+                            <button class="btn btn-outline-light" type="submit" id="button-addon2">
                                 <i class="fa fa-search" style="font-size:18px"></i>
                             </button>
                         </div>
@@ -48,6 +48,12 @@
                 </button>
                 <div class="collapse navbar-collapse" id="collapsibleNavId">
                     <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">
+                                <i class="fa fa-home" style="font-size:24px"></i><br />
+                                <span class="title">HOME</span>
+                            </a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
                                 <i class="fa fa-mobile-phone" style="font-size:24px"></i><br />
@@ -85,14 +91,9 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="account.html">
                                 <i class="fa fa-user-circle-o" style="font-size:24px"></i><br />
                                 <span class="title">TÀI KHOẢN</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-
                             </a>
                         </li>
                     </ul>
@@ -103,11 +104,11 @@
 
     <section>
         <div class="account">
-            <div id="signin">
+            <div id="login">
                 <form action="#" method="post" novalidate="true" @submit="Kiemtradulieu">
-                    <div class="title-signin">Đăng Nhập</div>
-                    <div class="md-form input-group mb-3">
-                        <div class="input-group-prepend">
+                    <div class="title-login">Đăng Nhập</div>
+                    <div class="md-form input-group">
+                        <div class="input-group-prepend mb-4">
                             <span class="input-group-text " id="material-addon1"><i class="fa fa-user" style="font-size:24px"></i></span>
                         </div>
                         <input type="text" class="form-control" id="txtuser" name="txtuser" v-model="user">
@@ -115,11 +116,11 @@
                     <div class="alert alert-danger" role="alert" v-if="thongbaoloi1()">
                         <span v-for="error1 in errors1">{{error1}}</span><br />
                     </div>
-                    <div class="md-form input-group mb-3">
-                        <div class="input-group-prepend">
+                    <div class="md-form input-group">
+                        <div class="input-group-prepend mb-3">
                             <span class="input-group-text" id="material-addon2"><i class="fa fa-lock" style="font-size:24px"></i></span>
                         </div>
-                        <input type="text" class="form-control" id="txtpass" name="txtpass" v-model="pass">
+                        <input type="password" class="form-control" id="txtpass" name="txtpass" v-model="pass">
                     </div>
                     <div class="alert alert-danger" role="alert" v-if="thongbaoloi2()">
                         <span v-for="error2 in errors2">{{error2}}</span><br />
@@ -129,14 +130,68 @@
                             <button type="submit" class="btn-signin">Đăng Nhập</button>
                         </div>
                         <div>
-                            <button type="button" class="btn-signup">Đăng Ký</button>
+                            <button type="button" class="btn-signup1" data-toggle="modal" data-target="#exampleModalCenter">Đăng Ký</button>
                         </div>
                     </div>
                 </form>
             </div>
+            <div style="width: 75%;margin: auto;">
+                <hr />
+            </div>
+            <div>
+                <div class="title-loginto">Đăng nhập qua</div>
+                <div class="dn">
+                    <div class="signup-fb">
+                        <button><i class="fa fa-facebook" style="font-size:24px"></i></button>
+                    </div>
+                    <div class="signip-em"><button>
+                        <i class="fa fa-google" style="font-size:24px"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="modal-title" id="exampleModalLongTitle">Đăng Ký</span>
+                        </div>
+                        <div class="modal-body">
+                            <form action="#" method="POST" novalidate="true" @submit="">
+                                <div class="m-body">
+                                    <div>Nhập số điện thoại:</div>
+                                    <input type="text">
+                                    <div>Nhập mật khẩu:</div>
+                                    <input type="text">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Trở lại</button>
+                            <button type="button" class="btn btn-primary">Đăng ký</button>
+                        </div>
+                        <div style="width: 75%;margin: auto;">
+                            <hr />
+                        </div>
+                        <div>
+                            <div class="title-loginto">Đăng nhập qua</div>
+                            <div class="dn">
+                                <div class="signup-fb">
+                                    <button><i class="fa fa-facebook" style="font-size:24px"></i></button>
+                                </div>
+                                <div class="signip-em"><button>
+                                    <i class="fa fa-google" style="font-size:24px"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-
     <footer>
         <div class="container-footer">
             <div class="col--1">

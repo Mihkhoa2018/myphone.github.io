@@ -1,5 +1,5 @@
 var vue = new Vue({
-    el: '#signin',
+    el: '#login',
     data: {
 
         // Tạo biến quản lý lỗi là mảng rỗng

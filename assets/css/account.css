@@ -4,17 +4,18 @@
     width: 30%;
     margin-left: auto;
     margin-right: auto;
-    border: 1px solid #ccc;
+    border: 1px solid #F8F8F8;
     border-radius: 5px;
+    background-color: #F8F8F8;
 }
 
-#signin {
+#login {
     width: 70%;
     margin-left: auto;
     margin-right: auto;
 }
 
-.title-signin {
+.title-login {
     text-align: center;
     font-size: 28px;
     font-weight: 600;
@@ -24,14 +25,14 @@
 .btn-login {
     display: grid;
     grid-template-columns: 50% 50%;
-    margin-top: 40px;
+    margin-top: 20px;
     margin-bottom: 40px;
 }
 
 .btn-login button {
     width: 125px;
     padding: 5px;
-    border: 1px solid #000;
+    border: 1px solid white;
     border-radius: 5px;
 }
 
@@ -43,7 +44,7 @@
     font-weight: 600;
 }
 
-.btn-signup {
+.btn-signup1 {
     margin-left: 10px;
     background-color: #f0f351;
     color: #000;
@@ -62,7 +63,98 @@
         width: 90%;
         margin-top: 40px;
     }
-    #signin {
+    #login {
         width: 80%;
     }
+}
+
+
+/* ===== EDIT SIGNUP ===== */
+
+#signup {
+    width: 90%;
+    margin: auto;
+}
+
+.title-signup {
+    text-align: center;
+    padding: 20px;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.form-signup div {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.btn-signup2 {
+    text-align: center;
+}
+
+
+/* ====== */
+
+.title-loginto {
+    font-size: 16px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.dn {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.dn button {
+    width: 70%;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding-top: 6px;
+    padding-bottom: 4px;
+}
+
+.signup-fb button {
+    float: right;
+    margin-right: 10px;
+    color: white;
+    background-color: #0101bd;
+}
+
+.signip-em button {
+    margin-left: 10px;
+    color: white;
+    background-color: #C80000;
+}
+
+
+/* ===== EDIT MODAL ===== */
+
+.modal-header .modal-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin: auto;
+}
+
+.modal-footer {
+    justify-content: center;
+}
+
+
+/* modal body */
+
+.m-body {
+    width: 50%;
+    margin: auto;
+}
+
+.m-body div {
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.m-body input {
+    width: 100%;
 }

@@ -29,6 +29,7 @@ header {
 
 .navbar {
     padding: 5px 0;
+    text-align: center;
 }
 
 .navbar .navbar-brand {
@@ -41,11 +42,14 @@ header {
 
 .collapse .nav-item {
     margin-left: 10px;
-    text-align: center;
 }
 
 .navbar-dark .navbar-nav .nav-link {
     color: white;
+}
+
+.nav-item .title {
+    font-size: 15px;
 }
 
 
@@ -150,8 +154,8 @@ section {
     border-radius: 8px;
     margin: 2px;
     padding: 5px;
-    text-align: center;
     background-color: white;
+    text-align: center;
 }
 
 
@@ -203,7 +207,7 @@ footer {
     margin-top: 40px;
     padding: 10px;
     display: grid;
-    grid-template-columns: 33% 33% 34%;
+    grid-template-columns: 33.5% 33% 33.5%;
 }
 
 .container-footer a {
@@ -244,6 +248,12 @@ footer {
 
 /* ===== edit repoinsive ===== */
 
+@media (max-width: 1440px) {
+    .nav-item .title {
+        font-size: 14px;
+    }
+}
+
 @media (max-width: 1024px) {
     .banner-news {
         width: 100%;
@@ -253,6 +263,9 @@ footer {
     }
     .container-footer {
         width: 100%;
+    }
+    .nav-item .title {
+        font-size: 12px;
     }
 }
 
