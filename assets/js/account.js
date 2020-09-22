@@ -1,73 +1,100 @@
-var vue = new Vue({
-    el: '#login',
+//  ===== SIGN-IN =====
+new Vue({
+    el: '#app1',
     data: {
-
-        // Tạo biến quản lý lỗi là mảng rỗng
         errors1: [],
         errors2: [],
-
-        // Tạo biến quản lý việc kiếm tra Ràng buộc dữ liệu (validation) hay chưa?
-        // Mặc định là chưa kiểm tra
-        kiemtraloixong: false,
-
-        //tạo giá trị ban đầu
         user: '',
-        pass: ''
+        pass: '',
+        bugsuccess: false,
     },
     methods: {
-        Kiemtradulieu: function(e) {
+        testdata1: function(e) {
             e.preventDefault();
-
-            //loi chua xay ra
             this.errors1 = [];
             this.errors2 = [];
-            this.kiemtraloixong = false;
+            this.bugsuccess = false;
 
-            //kiem tra user
-            if (this.user == "") {
+            if (this.user == '') {
                 this.errors1.push('Vui lòng nhập tài khoản');
-
+            } else if (this.user.length < 5) {
+                this.errors1.push('Tài khoản không hợp lệ');
             }
 
-            //kiem tra mat khau
-            if (this.pass == "") {
+            if (this.pass == '') {
                 this.errors2.push('Vui lòng nhập mật khẩu');
+            } else if (this.pass.length < 5) {
+                this.errors2.push('mật khẩu không hợp lệ');
             }
 
-            this.kiemtraloixong = true;
+            this.bugsuccess = true;
             return false;
         },
-
-        thongbaoloi1: function() {
-            if (this.kiemtraloixong == false) {
+        displaybug: function() {
+            if (this.bugsuccess == false) {
                 return false;
             }
-            if (this.errors1.length > 0) {
+            if (this.errors1.length > 0 || this.errors2.length > 0) {
                 return true;
             }
             return false;
-        },
-        thongbaoloi2: function() {
-            if (this.kiemtraloixong == false) {
-                return false;
-            }
-            if (this.errors2.length > 0) {
-                return true;
-            }
-            return false;
-        },
+        }
+    }
+});
 
-        thongbao: function() {
-            // Nếu chưa vượt qua bước kiểm tra lỗi thì không được hiển thị thông báo
-            if (this.dakiemtraloixong == false) {
+//  ===== SIGN-UP =====
+
+new Vue({
+    el: '#app2',
+    data: {
+        errors3: [],
+        errors4: [],
+        errors5: [],
+
+        txtphone: '',
+        txtpwd1: '',
+        txtpwd2: '',
+
+        bugsuccess: false,
+
+    },
+    methods: {
+        testdata2: function(e) {
+            e.preventDefault();
+            this.errors3 = [];
+            this.errors4 = [];
+            this.errors5 = [];
+            this.bugsuccess = false;
+
+            if (this.txtphone == '') {
+                this.errors3.push('Vui lòng nhập số điện thoại');
+            } else if (this.txtphone.length >= 10) {
+                this.errors3.push('Số điện thoại không hợp lệ');
+            }
+
+            if (this.txtpwd1 == '') {
+                this.errors4.push('Vui lòng nhập mật khẩu');
+            } else if (this.txtpwd1.length <= 6) {
+                this.errors4.push('Mật khẩu phải từ 5 kí tự');
+            }
+
+            if (this.txtpwd2 == '') {
+                this.errors5.push('Vui lòng nhập lại mật khẩu');
+            } else if (this.txtpwd2 != this.txtpwd1) {
+                this.errors5.push('Mật khẩu được nhập không khớp');
+            }
+
+            this.bugsuccess = true;
+            return false;
+
+        },
+        displaybug: function() {
+            if (this.bugsuccess == false) {
                 return false;
             }
-            // Nếu không có bất kỳ lỗi nào (mảng array lỗi là rỗng) => độ dài array == 0)
-            // Không có lỗi => được hiển thị thông báo chào mừng
-            if ((this.errors1.length == 0) || (this.errors2.length == 0)) {
+            if (this.errors3.length > 0 || this.errors4.length > 0 || this.errors5.length > 0) {
                 return true;
             }
-            // Mặc định không hiển thị
             return false;
         }
     }

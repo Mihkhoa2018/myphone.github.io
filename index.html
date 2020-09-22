@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="assets/css/index.css" type="text/css">
 
     <!-- liên kết Vuejs  -->
-    <script src="vender/vuejs/vue.min.js"></script>
+    <script src="vender/vuejs/vue.js"></script>
 
 </head>
 
@@ -27,7 +27,7 @@
             <a href="#"><img src="assets/img/banner_samsung-3.png" alt="" style="width: 100%;"></a>
         </div>
         <div></div>
-        <div class="container-design">
+        <div class="navbar-container">
             <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #cd1818">
                 <a class="navbar-brand" href="index.html">MYPHONE</a>
                 <form class="form-inline my-2 my-lg-0">
@@ -134,7 +134,7 @@
                 </div>
                 <div class="news">
                     <div class="title-1">
-                        <span class="tt">Thông tin nổi bật</span>
+                        <span class="txt-title">Thông tin nổi bật</span>
                         <span class="all" style="float: right;"><a href="#">Xem tất cả</a></span>
                     </div>
                     <div class="news-1">
@@ -160,91 +160,129 @@
             </div>
         </div>
         <div></div>
-        <div class="container-design">
-            <div id="item-1">
-                <div class="title-sp">KHUYỄN MÃI HOT</div>
+        <!-- KHUYỄN MÃI HOT -->
+        <div id="item-1">
+            <div class="container-design">
+                <div class="title-sp">KHUYỄN MÃI HOT</div>
                 <div class="grid-container">
-                    <div class="grid-item" v-for="item in list_1">
-                        <a href="#">
-                            <div><img :src="item.img" alt="" style="width: 160px;height:220px;"></div>
-                            <div class="title-product">{{item.title}}</div>
-                            <div class="price-product">{{item.price}}</div>
+                    <div class="banner-product">
+                        <a href="">
+                            <div class="img-product_1"><img src="assets/img/banner-product/samsung-galaxy-note-20.jpg" style="width: 100%;height: 100%;"></div>
+                            <div class="tragop"><span>Trả góp 0%</span></div>
+                            <div class="title-product">Oppo Reno 4</div>
+                            <div class="price-product">4.890.000&nbsp;<small><u>đ</u></small></div>
                         </a>
+                    </div>
+                    <div class="border-design" v-for="item in list_1">
+                        <div class="design">
+                            <div class="tragop"><span>Trả góp 0%</span></div>
+                            <a href="">
+                                <div class="img-product"><img :src="item.img"></div>
+                                <div class="title-product">{{item.title}}</div>
+                                <div class="price-product">{{item.price}}&nbsp;<small><u>đ</u></small></div>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <div></div>
-        <div class="container-design">
-            <div id="item-2">
-                <div class="title-sp">SMARTPHONE NỔI BẬT</div>
+        <!-- SMARTPHONE NỔI BẬT NHẤT -->
+        <div id="item-2">
+            <div class="container-design">
+                <div class="title-sp">SMARTPHONE NỔI BẬT NHẤT</div>
                 <div class="grid-container">
-                    <div class="grid-item" v-for="item in list_2">
-                        <a href="#">
-                            <div><img :src="item.img" alt="" style="width: 160px;height:220px;"></div>
-                            <div class="title-product">{{item.title}}</div>
-                            <div class="price-product">{{item.price}}</div>
+                    <div class="banner-product">
+                        <a href="">
+                            <div class="img-product_1"><img src="assets/img/banner-product/oppo-reno4.jpg" style="width: 100%;height: 100%;"></div>
+                            <div class="tragop"><span>Trả góp 0%</span></div>
+                            <div class="title-product">Oppo Reno 4</div>
+                            <div class="price-product">4.890.000&nbsp;<small><u>đ</u></small></div>
                         </a>
+                    </div>
+                    <div class="border-design" v-for="item in list_2">
+                        <div class="design">
+                            <div class="tragop"><span>Trả góp 0%</span></div>
+                            <a href="">
+                                <div class="img-product"><img :src="item.img"></div>
+                                <div class="title-product">{{item.title}}</div>
+                                <div class="price-product">{{item.price}}&nbsp;<small><u>đ</u></small></div>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <div></div>
-        <div class="container-design">
-            <div class="banner-mid">
-                <a href="#">
-                    <img src="assets/img/banner-big/202007271535252095_banner.jpg" alt="">
+        <div class="container-design ">
+            <div class="banner-mid ">
+                <a href="# ">
+                    <img src="assets/img/banner-big/202003310840284410_pin.jpg" alt=" ">
                 </a>
             </div>
         </div>
-        <div></div>
-        <div class="container-design">
-            <div id="item-3">
-                <div class="title-sp">TABLET NỔI BẬT NHẤT</div>
+        <!-- TABLET NÔI BẬT NHẤT -->
+        <div id="item-3">
+            <div class="container-design">
+                <div class="title-sp">TABLE NỘI BẬT NHẤT</div>
                 <div class="grid-container">
-                    <div class="grid-item" v-for="item in list_3">
-                        <a href="#">
-                            <div><img :src="item.img" alt="" style="width: 160px;height:220px;"></div>
-                            <div class="title-product">{{item.title}}</div>
-                            <div class="price-product">{{item.price}}</div>
+                    <div class="banner-product">
+                        <a href="">
+                            <div class="img-product_1"><img src="assets/img/banner-product/aikuuuuuuu.png" style="width: 100%;height: 100%;"></div>
+                            <div class="tragop"><span>Trả góp 0%</span></div>
+                            <div class="title-product">Samsung Galaxy Tab S7</div>
+                            <div class="price-product">18.990.000 VNĐ</div>
                         </a>
+                    </div>
+                    <div class="border-design" v-for="item in list_3">
+                        <div class="design">
+                            <div class="tragop"><span>Trả góp 0%</span></div>
+                            <a :href="item.link">
+                                <div class="img-product"><img :src="item.img"></div>
+                                <div class="title-product">{{item.title}}</div>
+                                <div class="price-product">{{item.price}}</div>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <div></div>
+        <!-- PHỤ KIỆN GIÁ RẺ -->
         <div class="container-design">
             <div id="item-4">
                 <div class="title-sp">PHỤ KIỆN GIÁ RẺ</div>
-                <div class="grid-container">
-                    <div class="grid-item" v-for="item in list_4">
+                <div class="grid-container-2">
+                    <div class="grid-item_2" v-for="item in list_4">
+                        <div class="sale"><span>Sale 20%</span></div>
                         <a href="#">
-                            <div><img :src="item.img" alt="" style="width: 160px;height:220px;"></div>
-                            <div class="title-product">{{item.title}}</div>
-                            <div class="price-product">{{item.price}}</div>
+                            <div class="img-product_2"><img :src="item.img" alt=""></div>
+                            <div class="title-product_2 ">{{item.title}}</div>
+                            <div class="price-product_2 ">{{item.price}}&nbsp;<small><u>đ</u></small></div>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
         <div></div>
-        <div class="container-design">
-            <div class="banner-mid">
-                <a href="#">
-                    <img src="assets/img/banner-big/202003310840284410_pin.jpg" alt="">
+        <div class="container-design ">
+            <div class="banner-mid ">
+                <a href="# ">
+                    <img src="assets/img/banner-big/202007271535252095_banner.jpg" alt=" ">
                 </a>
             </div>
         </div>
         <div></div>
+        <!-- ĐỒNG HỒ THÔNG MINH -->
         <div class="container-design">
             <div id="item-5">
                 <div class="title-sp">ĐỒNG HỒ THÔNG MINH</div>
-                <div class="grid-container">
-                    <div class="grid-item" v-for="item in list_5">
-                        <a href="#">
-                            <div><img :src="item.img" alt="" style="width: 160px;height:220px;"></div>
-                            <div class="title-product">{{item.title}}</div>
-                            <div class="price-product">{{item.price}}</div>
+                <div class="grid-container-2 ">
+                    <div class="grid-item_2 " v-for="item in list_5 ">
+                        <a href="# ">
+                            <div class="img-product_2"><img :src="item.img" alt=""></div>
+                            <div class="title-product_2 ">{{item.title}}</div>
+                            <div class="price-product_2 ">{{item.price}}&nbsp;<small><u>đ</u></small></div>
                         </a>
                     </div>
                 </div>
@@ -252,26 +290,26 @@
         </div>
     </section>
     <footer>
-        <div class="container-footer">
-            <div class="col--1">
-                <a href="#"><span>Giới thiệu công ty MYPHONE</span></a><br />
-                <a href="#"><span>Chính sách bảo mật</span></a><br />
-                <div class="thanhtoan">
-                    <i class="fa fa-cc-mastercard" style="font-size:24px"></i>
-                    <i class="fa fa-cc-visa" style="font-size:24px"></i><br />
-                    <img src="assets/img/logoSaleNoti.png" alt="" style="width: 30%;">
+        <div class="container-footer ">
+            <div class="col--1 ">
+                <a href="# "><span>Giới thiệu công ty MYPHONE</span></a><br />
+                <a href="# "><span>Chính sách bảo mật</span></a><br />
+                <div class="thanhtoan ">
+                    <i class="fa fa-cc-mastercard " style="font-size:24px "></i>
+                    <i class="fa fa-cc-visa " style="font-size:24px "></i><br />
+                    <img src="assets/img/logoSaleNoti.png " alt=" " style="width: 30%; ">
                 </div>
             </div>
-            <div class="col--2">
+            <div class="col--2 ">
                 <span>Giọi mua hàng miến phí: 0398423952</span><br />
                 <span>Gọi khiếu nại & bảo hành: 0569645235</span><br />
                 <span>Gọi hợp tác kinh doanh: 113</span>
-                <div class="lienhe">
-                    <a target="_blank" href="https://www.facebook.com/Mihkhoadao"><i class="facebook fa fa-facebook-official" style="font-size:24px"></i>&nbsp;&nbsp;</a>
-                    <a target="_blank" href="https://www.youtube.com/channel/UCEnXcLsYXby3vxZMGx63wlg"><i class="youtube fa fa-youtube-play" style="font-size:24px"></i></a>
+                <div class="lienhe ">
+                    <a target="_blank " href="https://www.facebook.com/Mihkhoadao "><i class="facebook fa fa-facebook-official " style="font-size:24px "></i>&nbsp;&nbsp;</a>
+                    <a target="_blank " href="https://www.youtube.com/channel/UCEnXcLsYXby3vxZMGx63wlg "><i class="youtube fa fa-youtube-play " style="font-size:24px "></i></a>
                 </div>
             </div>
-            <div class="col--2">
+            <div class="col--2 ">
                 <span><strong>Chi Nhánh:</strong></span><br />
                 <span><strong>Hà Nội:</strong> ở Hà Nội</span><br />
                 <span><strong>TP.HCM:</strong> ở TP HCM</span><br />
@@ -279,19 +317,19 @@
             </div>
         </div>
     </footer>
-    <div style=" padding: 5px; text-align: center;"><span style="font-size: 12px;">Bản quyền thuộc về MihKhoa</span></div>
-    <img src="" alt="">
+    <div class="banquyen "><span>Bản quyền&reg; thuộc về MihKhoa</span></div>
 
     <!-- Liên kết Jquery -->
-    <script src="vender/jquery/jquery.min.js"></script>
+    <script src="vender/jquery/jquery.min.js "></script>
     <!-- Liên kết PopperJS -->
-    <script src="vender/popperjs/popper.min.js"></script>
+    <script src="vender/popperjs/popper.min.js "></script>
     <!-- Liên kết Bootstrap -->
-    <script src="vender/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vender/bootstrap/js/bootstrap.min.js "></script>
     <!-- Custom script - Các file js do mình tự viết -->
-    <script src="assets/js/index.js"></script>
-    <script src="assets/js/product.js"></script>
+    <script src="assets/js/index.js "></script>
+    <script src="assets/js/product.js "></script>
 
+    <img src="" alt="">
 </body>
 
 </html>
