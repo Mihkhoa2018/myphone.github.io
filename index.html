@@ -22,6 +22,7 @@
 </head>
 
 <body>
+    <a href=""></a>
     <header>
         <div class="banner-top-header">
             <a href="#"><img src="assets/img/banner_samsung-3.png" alt="" style="width: 100%;"></a>
@@ -291,16 +292,21 @@
     </section>
     <footer>
         <div class="container-footer ">
-            <div class="col--1 ">
+            <div class="col-footer">
+                <h6>THÔNG TIN HỖ TRỢ</h6>
                 <a href="# "><span>Giới thiệu công ty MYPHONE</span></a><br />
                 <a href="# "><span>Chính sách bảo mật</span></a><br />
                 <div class="thanhtoan ">
-                    <i class="fa fa-cc-mastercard " style="font-size:24px "></i>
-                    <i class="fa fa-cc-visa " style="font-size:24px "></i><br />
+                    <i class="fa fa-cc-paypal" style="color: rgb(4, 4, 165);"></i>
+                    <i class="fa fa-cc-jcb" style="color: rgb(238, 127, 0);"></i>
+                    <i class="fa fa-cc-mastercard" style="color: rgb(224, 3, 3);"></i>
+                    <i class="fa fa-cc-visa" style="color: rgb(4, 4, 165);"></i>
+                    <br />
                     <img src="assets/img/logoSaleNoti.png " alt=" " style="width: 30%; ">
                 </div>
             </div>
-            <div class="col--2 ">
+            <div class="col-footer col-footer-mid">
+                <h6>THÔNG TIN LIÊN LẠC</h6>
                 <span>Giọi mua hàng miến phí: 0398423952</span><br />
                 <span>Gọi khiếu nại & bảo hành: 0569645235</span><br />
                 <span>Gọi hợp tác kinh doanh: 113</span>
@@ -309,15 +315,51 @@
                     <a target="_blank " href="https://www.youtube.com/channel/UCEnXcLsYXby3vxZMGx63wlg "><i class="youtube fa fa-youtube-play " style="font-size:24px "></i></a>
                 </div>
             </div>
-            <div class="col--2 ">
-                <span><strong>Chi Nhánh:</strong></span><br />
+            <div class="col-footer">
+                <h6>CHI NHÁNH BÁN HÀNG</h6>
                 <span><strong>Hà Nội:</strong> ở Hà Nội</span><br />
+                <span><strong>Đà Nẵng:</strong> ở Đà Nẵng</span><br />
+                <span><strong>Vũng Tàu:</strong> ở Vũng Tàu</span><br />
                 <span><strong>TP.HCM:</strong> ở TP HCM</span><br />
                 <span><strong>TP.Cần Thơ:</strong> 30/4, Ninh Kiều, Hưng Lợi, TP Cần Thơ</span>
             </div>
         </div>
+        <i class="fa fa-angle-up" onclick="topFunction()" id="myBtn" title="Go to top"></i>
+        <div class="fback" data-toggle="modal" data-target="#ModalCenter"><span>Feedback</span></div>
+        <div class="modal fade" id="ModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="title-modal" id="exampleModalLongTitle">Góp Ý</span>
+                    </div>
+                    <div class="modal-body">
+                        <form action="#" method="POST" novalidate="true" @submit="">
+                            <div class="txt-input-fb">
+                                <label for="fbgamil">Nhập Gmail:</label>
+                                <input type="text" id="fbgamil" name="fbgamil" v-model="fbgamil">
+                                <div v-if="displaybug()">
+                                    <small v-for="error3 in errors3"></small>
+                                </div>
+                            </div>
+                            <div class="txt-input-fb">
+                                <label for="txtfb">Góp ý</label>
+                                <textarea name="txtfb" id="txtfb" cols="20" rows="5" v-model="txtfb"></textarea>
+                                <div v-if="displaybug()">
+                                    <small v-for="error4 in errors4"></small>
+                                </div>
+                            </div>
+                            <div class="btn-modal-signup">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+                                <button type="submit" class="btn btn-primary">Gửi</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
     </footer>
-    <div class="banquyen "><span>Bản quyền&reg; thuộc về MihKhoa</span></div>
+    <div class="banquyen"><span>Bản Quyền &copy; thuộc về MihKhoa</span></div>
 
     <!-- Liên kết Jquery -->
     <script src="vender/jquery/jquery.min.js "></script>
@@ -328,7 +370,6 @@
     <!-- Custom script - Các file js do mình tự viết -->
     <script src="assets/js/index.js "></script>
     <script src="assets/js/product.js "></script>
-
     <img src="" alt="">
 </body>
 

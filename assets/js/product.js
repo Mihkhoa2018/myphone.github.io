@@ -103,7 +103,7 @@ new Vue({
             }, {
                 id: 4,
                 img: 'assets/img/product-3/galaxy-s20_accessories.jpg',
-                title: 'Bao case Clearview Galaxy Note 20 – Hàng chính hãng',
+                title: 'Bao case Clearview Galaxy Note 20–Hàng chính hãng',
                 price: '890.000'
             }, {
                 id: 5,
@@ -120,27 +120,27 @@ new Vue({
         list_5: [{
             id: 1,
             img: 'assets/img/product-4/apple-watch-3.png',
-            title: 'Apple Watch Series 5 LTE ',
+            title: 'Apple Watch Series 5 LTE',
             price: '10.190.000'
         }, {
             id: 2,
             img: 'assets/img/product-4/apple-watch-4-trang.png',
-            title: 'Apple Watch Series 5 GPS 40mm ',
+            title: 'Apple Watch Series 5 GPS',
             price: '8.490.000'
         }, {
             id: 3,
             img: 'assets/img/product-4/apple-watch-4.png',
-            title: 'Apple Watch Series 5 LTE 40mm ',
+            title: 'Apple Watch Series 5 LTE',
             price: '10.169.000'
         }, {
             id: 4,
             img: 'assets/img/product-4/Apple-Watch-Series-5-back-1 (1).png',
-            title: 'Apple Watch Series 4 40mm Mới',
+            title: 'Apple Watch Series 4 40mm',
             price: '9.890.000'
         }, {
             id: 5,
             img: 'assets/img/product-4/Apple-Watch-Series-5-back-1.png',
-            title: 'Apple Watch Series 4 44mm Mới',
+            title: 'Apple Watch Series 4 44mm',
             price: '10.300.000'
         }]
     }
