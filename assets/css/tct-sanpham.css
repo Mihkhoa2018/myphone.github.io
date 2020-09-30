@@ -1,0 +1,106 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: white;
+}
+
+.chitietsp {
+    padding: 4px;
+    border-radius: 5px;
+}
+
+.title-ctsp {
+    font-size: 28px;
+}
+
+.sanpham {
+    display: grid;
+    grid-template-columns: 40% 40% 20%;
+}
+
+.price-sp {
+    font-size: 20px;
+}
+
+.price-sp span {
+    color: #cd1818;
+    font-weight: 600;
+}
+
+.khuyenmai {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.km1 {
+    font-size: 14px;
+}
+
+.dichvu {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.dichvu span {
+    font-size: 14px;
+}
+
+.thongtinsp .buysp {
+    font-weight: 600;
+    width: 100%;
+    height: 40px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: rgb(255, 174, 0);
+}
+
+.thongtinsp .addcart {
+    font-weight: 600;
+    color: yellow;
+    width: 100%;
+    height: 40px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: rgb(40, 43, 236);
+}
+
+.bnsp {
+    margin-top: 50px;
+    margin-left: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.thongsokt {
+    margin-top: 5px;
+    margin-left: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+@media (max-width:768px) {
+    .sanpham {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+}
+
+@media (max-width:426px) {
+    .sanpham {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+}

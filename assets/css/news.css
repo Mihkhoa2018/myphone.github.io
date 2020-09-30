@@ -1,0 +1,61 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.title-news {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.ds-new {
+    display: flex;
+    position: relative;
+    margin-top: 10px;
+}
+
+.new {
+    width: 75%;
+    background-color: white;
+    padding: 10px;
+    border-right: 1px solid #ccc;
+}
+
+.new-1 {
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.4%;
+}
+
+.title-tintuc {
+    grid-column: 2/4;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.new a {
+    text-decoration: none;
+    color: #000;
+}
+
+.sanpham-qc a {
+    text-decoration: none;
+    color: #000;
+}
+
+.sanpham-qc {
+    width: 25%;
+    padding: 15px;
+    background-color: white;
+}
+
+.sanpham {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.4%;
+}
+
+.sanpham span {
+    grid-column: 2/4;
+}

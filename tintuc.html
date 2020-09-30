@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Tin Tức</title>
 
     <!-- Liên kết CSS Bootstrap -->
     <link href="vender/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
@@ -15,6 +15,7 @@
 
     <!-- Custom css - Các file css do chúng ta tự viết -->
     <link rel="stylesheet" href="assets/css/index.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/news.css">
 
     <!-- liên kết Vuejs  -->
     <script src="vender/vuejs/vue.js"></script>
@@ -100,194 +101,146 @@
         </div>
     </header>
     <section>
-        <div class="banner-news">
-            <div class="banner-big">
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <a href="#"><img src="assets/img/banner-big/GalaxyTabS7.jfif" class="d-block w-100" alt="..."></a>
-                        </div>
-                        <div class="carousel-item">
-                            <a href="#"><img src="assets/img/banner-big/GalaxyZFold25G.jfif" class="d-block w-100" alt="..."></a>
-                        </div>
-                        <div class="carousel-item">
-                            <a href="#"><img src="assets/img/banner-big/VsmartLive4.jfif" class="d-block w-100" alt="..."></a>
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
-            </div>
-            <div class="b-b-m">
-                <div class="banner-small">
-                    <a href="#"><img src="assets/img/banner-small/KMT9.jfif" alt="banner"></a>
-                </div>
-                <div class="news">
-                    <div class="title-1">
-                        <span class="txt-title">Thông tin nổi bật</span>
-                        <span class="all" style="float: right;"><a href="#">Xem tất cả</a></span>
-                    </div>
-                    <div class="news-1">
-                        <a href="#">
-                            <img src="assets/img/Note20.png" alt="icon">
-                            <div class="title-2">
-                                <span class="new-title">Lên đời tiết kiệm hơn 23.5 triệu</span><br />
-                                <span class="date">20.10.2020</span>
-                            </div>
-                        </a>
-                    </div>
-                    <hr />
-                    <div class="news-1">
-                        <a href="#">
-                            <img src="assets/img/vivo-y20.png" alt="icon">
-                            <div class="title-2">
-                                <span class="new-title">Chơi mini game cơ hội trúng Y20</span><br>
-                                <span class="date">20.09.2020</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
+        <div class="title-news">
+            <span>Tin Tức</span>
         </div>
-        <div></div>
-        <!-- KHUYỄN MÃI HOT -->
-        <div id="item-1">
-            <div class="container-design">
-                <div class="title-sp">KHUYỄN MÃI HOT</div>
-                <div class="grid-container">
-                    <div class="banner-product">
-                        <a href="">
-                            <div class="img-product_1"><img src="assets/img/banner-product/samsung-galaxy-note-20.jpg" style="width: 100%;height: 100%;"></div>
-                            <div class="tragop"><span>Trả góp 0%</span></div>
-                            <div class="title-product">Oppo Reno 4</div>
-                            <div class="price-product">4.890.000&nbsp;<small><u>đ</u></small></div>
-                        </a>
-                    </div>
-                    <div class="border-design" v-for="item in list_1">
-                        <div class="design">
-                            <div class="tragop"><span>Trả góp 0%</span></div>
-                            <a :href="item.link">
-                                <div class="img-product"><img :src="item.img"></div>
-                                <div class="title-product">{{item.title}}</div>
-                                <div class="price-product">{{item.price}}&nbsp;<small><u>đ</u></small></div>
-                            </a>
+        <div class="ds-new">
+            <div class="new">
+                <a href="#">
+                    <div class="new-1">
+                        <img src="assets/img/new-img/new1_oppo-reno-4-z-5g-ra-mat-cover.jfif" alt="" style="width: 100%;">
+                        <div class="title-tintuc">
+                            <span>OPPO Reno4 Z 5G với màn hình 120Hz, chip Dimensity 800 ra mắt, giá 10.3 triệu đồng</span><br />
+                            <small>Sau một thời gian xuất hiện dưới dạng tin đồn thì mới đây, OPPO vừa cho ra mắt một chiếc điện thoại tầm trung mới của hãng, có tên gọi là Reno4 5G.</small>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div></div>
-        <!-- SMARTPHONE NỔI BẬT NHẤT -->
-        <div id="item-2">
-            <div class="container-design">
-                <div class="title-sp">SMARTPHONE NỔI BẬT NHẤT</div>
-                <div class="grid-container">
-                    <div class="banner-product">
-                        <a href="">
-                            <div class="img-product_1"><img src="assets/img/banner-product/oppo-reno4.jpg" style="width: 100%;height: 100%;"></div>
-                            <div class="tragop"><span>Trả góp 0%</span></div>
-                            <div class="title-product">Oppo Reno 4</div>
-                            <div class="price-product">4.890.000&nbsp;<small><u>đ</u></small></div>
-                        </a>
-                    </div>
-                    <div class="border-design" v-for="item in list_2">
-                        <div class="design">
-                            <div class="tragop"><span>Trả góp 0%</span></div>
-                            <a :href="item.link">
-                                <div class="img-product"><img :src="item.img"></div>
-                                <div class="title-product">{{item.title}}</div>
-                                <div class="price-product">{{item.price}}&nbsp;<small><u>đ</u></small></div>
-                            </a>
+                </a>
+                <hr />
+                <a href="#">
+                    <div class="new-1">
+                        <img src="assets/img/new-img/new3_thong-so-oneplus-8t-1.jpg" alt="" style="width: 100%;">
+                        <div class="title-tintuc">
+                            <span>CEO xác nhận OnePlus 8T Pro sẽ không ra mắt trong năm nay</span><br />
+                            <small>Vào ngày 14 tháng 10 tới, OnePlus 8T sẽ được ra mắt tại Ấn Độ và ngày hôm sau nó cũng được trình làng ở thị trường Trung Quốc. Các tin đồn cho biết Công ty sẽ không ra mắt OnePlus 8T Pro trong năm nay.</small>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div></div>
-        <div class="container-design ">
-            <div class="banner-mid ">
-                <a href="# ">
-                    <img src="assets/img/banner-big/202003310840284410_pin.jpg" alt=" ">
+                </a>
+                <hr />
+                <a href="#">
+                    <div class="new-1">
+                        <img src="assets/img/new-img/new2_samsung-galaxy-s20-fe-11.jpg" alt="" style="width: 100%;">
+                        <div class="title-tintuc">
+                            <span>Khả năng Zoom 3x của Samsung Galaxy S20 FE rất ấn tượng và hữu ích trong điều kiện thiếu sáng</span><br />
+                            <small>Nhờ vào thuật toán AI thông minh và tối ưu phần cứng, khả năng chụp Space Zoom của Samsung Galaxy S20 FE cũng không hề thua kém ‘đàn anh’, dù chỉ trang bị ống kính Zoom 3x. </small>
+                        </div>
+                    </div>
+                </a>
+                <hr />
+                <a href="#">
+                    <div class="new-1">
+                        <img src="assets/img/new-img/new4-fe.jpg" alt="" style="width: 100%;">
+                        <div class="title-tintuc">
+                            <span>Tầm giá 15 triệu hơn, Samsung Galaxy S20 FE sở hữu những tính năng cao cấp nào?</span><br />
+                            <small>Samsung Galaxy S20 FE là phiên bản smartphone mong đợi nhất của iFan khi model này đáp ứng đầy đủ các tính năng “xịn sò” của flagship cùng mức giá hấp dẫn.</small>
+                        </div>
+                    </div>
+                </a>
+                <hr />
+                <a href="#">
+                    <div class="new-1">
+                        <img src="assets/img/new-img/new6.jpg" alt="" style="width: 100%;">
+                        <div class="title-tintuc">
+                            <span>Báo cáo: OPPO A93 với 6 camera AI sẽ ra mắt vào ngày 6 tháng 10 tới</span><br />
+                            <small>OPPO A93 có thể là phiên bản đổi tên của OPPO F17 Pro.</small>
+                        </div>
+                    </div>
+                </a>
+                <hr />
+                <a href="#">
+                    <div class="new-1">
+                        <img src="assets/img/new-img/new9.jpg" alt="" style="width: 100%;">
+                        <div class="title-tintuc">
+                            <span>Tròn mắt trước phiên bản iPhone 12 Pro với mặt lưng được lấy cảm hứng từ Apple I</span><br />
+                            <small>Do ảnh hưởng từ đại dịch Covid-19 nên năm nay, Apple dự kiến sẽ hoãn ra mắt loạt iPhone mới cho đến tháng 10 thay vì tháng 9 như mọi năm.</small>
+                        </div>
+                    </div>
+                </a>
+                <hr />
+                <a href="#">
+                    <div class="new-1">
+                        <img src="assets/img/new-img/new7.jfif" alt="" style="width: 100%;">
+                        <div class="title-tintuc">
+                            <span>Cách tắt dấu chấm đỏ trên màn hình Apple Watch</span><br />
+                            <small>Dấu chấm đỏ trên màn hình Apple Watch thể hiện rằng đồng hồ của bạn đang có thông báo mới. Nếu không thích hoặc thấy không cần thiết, bạn có thể tắt nó đi.</small>
+                        </div>
+                    </div>
                 </a>
             </div>
-        </div>
-        <!-- TABLET NÔI BẬT NHẤT -->
-        <div id="item-3">
-            <div class="container-design">
-                <div class="title-sp">TABLE NỘI BẬT NHẤT</div>
-                <div class="grid-container">
-                    <div class="banner-product">
-                        <a href="">
-                            <div class="img-product_1"><img src="assets/img/banner-product/aikuuuuuuu.png" style="width: 100%;height: 100%;"></div>
-                            <div class="tragop"><span>Trả góp 0%</span></div>
-                            <div class="title-product">Samsung Galaxy Tab S7</div>
-                            <div class="price-product">18.990.000 VNĐ</div>
-                        </a>
+            <div class="sanpham-qc">
+                <h5>Sản phẩm mới</h5>
+                <a href="#">
+                    <div class="sanpham">
+                        <img src="https://images.fpt.shop/unsafe/fit-in/80x80/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2020/9/25//637366209917910708_vivo-v20-xanh-dd.png" alt="">
+                        <span>Vivo V20 8GB -128GB</span>
                     </div>
-                    <div class="border-design" v-for="item in list_3">
-                        <div class="design">
-                            <div class="tragop"><span>Trả góp 0%</span></div>
-                            <a :href="item.link">
-                                <div class="img-product"><img :src="item.img"></div>
-                                <div class="title-product">{{item.title}}</div>
-                                <div class="price-product">{{item.price}}</div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div></div>
-        <!-- PHỤ KIỆN GIÁ RẺ -->
-        <div class="container-design">
-            <div id="item-4">
-                <div class="title-sp">PHỤ KIỆN GIÁ RẺ</div>
-                <div class="grid-container-2">
-                    <div class="grid-item_2" v-for="item in list_4">
-                        <div class="sale"><span>Sale&nbsp;{{item.sale}}</span></div>
-                        <a href="#">
-                            <div class="img-product_2"><img :src="item.img" alt=""></div>
-                            <div class="title-product_2 ">{{item.title}}</div>
-                            <div class="price-product_2 ">{{item.price}}&nbsp;<small><u>đ</u></small></div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div></div>
-        <div class="container-design ">
-            <div class="banner-mid ">
-                <a href="# ">
-                    <img src="assets/img/banner-big/202007271535252095_banner.jpg" alt=" ">
                 </a>
-            </div>
-        </div>
-        <div></div>
-        <!-- ĐỒNG HỒ THÔNG MINH -->
-        <div class="container-design">
-            <div id="item-5">
-                <div class="title-sp">ĐỒNG HỒ THÔNG MINH</div>
-                <div class="grid-container-2 ">
-                    <div class="grid-item_2 " v-for="item in list_5 ">
-                        <div class="sale"><span>Sale&nbsp;{{item.sale}}</span></div>
-                        <a href="# ">
-                            <div class="img-product_2"><img :src="item.img" alt=""></div>
-                            <div class="title-product_2 ">{{item.title}}</div>
-                            <div class="price-product_2 ">{{item.price}}&nbsp;<small><u>đ</u></small></div>
-                        </a>
+                <hr />
+                <a href="#">
+                    <div class="sanpham">
+                        <img src="https://images.fpt.shop/unsafe/fit-in/80x80/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2020/9/7//637350931609117767_xiaomi-poco-x3-xam-dd.png" alt="">
+                        <span>Poco X3 NFC 6GB-128GB</span>
                     </div>
-                </div>
+                </a>
+                <hr />
+                <a href="#">
+                    <div class="sanpham">
+                        <img src="https://images.fpt.shop/unsafe/fit-in/80x80/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2020/9/17//637359494094896144_vsmart-aris-pro-xanh-dd.png" alt="">
+                        <span>Vsmart Aris Pro 8GB-128GB</span>
+                    </div>
+                </a>
+                <hr />
+                <a href="#">
+                    <div class="sanpham">
+                        <img src="https://images.fpt.shop/unsafe/fit-in/80x80/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2020/3/27//637209162252840704_ss-m21-xanh-dd.png " alt="">
+                        <span>Samsung Galaxy M21</span>
+                    </div>
+                </a>
+                <hr />
+                <a href="#">
+                    <div class="sanpham">
+                        <img src="https://images.fpt.shop/unsafe/fit-in/80x80/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2020/4/28//637236791683138737_reno-3-dd.png" alt="">
+                        <span>Oppo Reno3 8GB-128GB</span>
+                    </div>
+                </a>
+                <hr />
+                <a href="#">
+                    <div class="sanpham">
+                        <img src="https://images.fpt.shop/unsafe/fit-in/80x80/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2020/4/21//637230565234443213_ip-se-dd.png" alt="">
+                        <span>iPhone SE (2020) 64GB</span>
+                    </div>
+                </a>
+                <hr />
+                <a href="#">
+                    <div class="sanpham">
+                        <img src="https://images.fpt.shop/unsafe/fit-in/80x80/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2020/3/18//637201445439339882_realme-6-xanh-dd.png" alt="">
+                        <span>Realme 6 4GB-128GB</span>
+                    </div>
+                </a>
+                <hr />
+                <a href="#">
+                    <div class="sanpham">
+                        <img src="https://images.fpt.shop/unsafe/fit-in/80x80/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2020/8/5//637322667006838510_ss-note-20-gold-dd.png" alt="">
+                        <span>Samsung Galaxy Z Fold2 5G</span>
+                    </div>
+                </a>
+                <hr />
+                <a href="#">
+                    <div class="sanpham">
+                        <img src="https://images.fpt.shop/unsafe/fit-in/80x80/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2020/8/25//637339682404344913_oppo-a53-dd.png" alt="">
+                        <span>Oppo A31 4GB-128GB</span>
+                    </div>
+                </a>
+                <hr />
             </div>
         </div>
     </section>
@@ -336,7 +289,7 @@
                     </div>
                     <div class="modal-body">
                         <div id="feedback-rb">
-                            <form action="#" method="POST" novalidate="true" @submit="testdata2">
+                            <form action="#" method="POST" novalidate="true" @submit="">
                                 <div class="gopy">
                                     <label for="#"><span>Quý khách đang quan tâm về:</span></label>
                                     <div>
@@ -349,23 +302,23 @@
                                         <small></small>
                                     </div>
                                     <label for="title-gopy">Tiêu đề:</label>
-                                    <div v-if="displaybug()">
-                                        <input type="text" id="title-gopy" name="title-gopy" v-modal="title_gopy"><br />
-                                        <small v-for="error3 in errors3">{{error3}}</small>
+                                    <div>
+                                        <input type="text" id="title-gopy" name="title-gopy" v-modal="title-gopy"><br />
+                                        <small></small>
                                     </div>
                                     <label for="noidung-gopy">Nội dung</label>
                                     <div>
-                                        <textarea name="noidung-gopy" id="noidung-gopy" cols="25" rows="5" v-modal="noidung_gopy"></textarea><br />
+                                        <textarea name="noidung-gopy" id="noidung-gopy" cols="25" rows="5" v-modal="noidung-gopy"></textarea><br />
                                         <small></small>
                                     </div>
                                     <label for="hoten-gopy">Họ và tên:</label>
                                     <div>
-                                        <input type="text" id="hoten-gopy" name="hoten-gopy" v-modal="hoten_gopy"><br />
+                                        <input type="text" id="hoten-gopy" name="hoten-gopy" v-modal="hoten-gopy"><br />
                                         <small></small>
                                     </div>
                                     <label for="diachi-gopy">Địa chỉ Email:</label>
                                     <div>
-                                        <input type="text" id="diachi-gopy" name="diachi-gopy" v-modal="diachi_gopy"><br />
+                                        <input type="text" id="diachi-gopy" name="diachi-gopy" v-modal="diachi-gopy"><br />
                                         <small></small>
                                     </div>
                                 </div>
@@ -383,6 +336,7 @@
     </footer>
     <div class="banquyen"><span>Bản Quyền &copy; thuộc về MihKhoa</span></div>
 
+
     <!-- Liên kết Jquery -->
     <script src="vender/jquery/jquery.min.js "></script>
     <!-- Liên kết PopperJS -->
@@ -391,8 +345,8 @@
     <script src="vender/bootstrap/js/bootstrap.min.js "></script>
     <!-- Custom script - Các file js do mình tự viết -->
     <script src="assets/js/index.js "></script>
-    <script src="assets/js/product-index.js"></script>
-    <img src="" alt="">
+    <script src="assets/js/product.js "></script>
+
 </body>
 
 </html>

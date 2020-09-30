@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tài Khoản</title>
+    <title>Home</title>
 
     <!-- Liên kết CSS Bootstrap -->
     <link href="vender/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
@@ -15,11 +15,10 @@
 
     <!-- Custom css - Các file css do chúng ta tự viết -->
     <link rel="stylesheet" href="assets/css/index.css" type="text/css">
-    <link rel="stylesheet" href="assets/css/account.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/gioithieu.css">
 
     <!-- liên kết Vuejs  -->
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-
+    <script src="vender/vuejs/vue.js"></script>
 
 </head>
 
@@ -101,92 +100,43 @@
             </nav>
         </div>
     </header>
-
     <section>
-        <div class="account">
-            <div class="header">
-                <h4>Đăng Nhập</h4>
-            </div>
-            <div id="app1">
-                <form class="form" id="form" action="#" method="post" novalidate="true" @submit="testdata1">
-                    <div class="form-control-design">
-                        <div class="md-form input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text " id="material-addon1"><i class="fa fa-user" style="font-size:24px"></i></span>
-                            </div>
-                            <input type="text" class="form-control" id="username" name="username" v-model="user" placeholder="Tài khoản">
-                        </div>
-                        <div v-if="displaybug()">
-                            <small class="notification" v-for="error1 in errors1">{{error1}}</small>
-                        </div>
-                    </div>
-                    <div class="form-control-design">
-                        <div class="md-form input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" id="material-addon2"><i class="fa fa-lock" style="font-size:24px"></i></span>
-                            </div>
-                            <input type="password" class="form-control" id="password" name="password" v-model="pass" placeholder="Mật khẩu">
-                        </div>
-                        <div v-if="displaybug()">
-                            <small class="notification" v-for="error2 in errors2">{{error2}}</small>
-                        </div>
-                    </div>
-                    <div class="btn-login">
-                        <button type="submit" class="btn-signin">Đăng Nhập</button>
-                        <button type="button" class="btn-signup" data-toggle="modal" data-target="#exampleModalCenter">Đăng Ký</button>
-                    </div>
-                </form>
-            </div>
-            <div style="width: 85%;margin: auto;">
-                <hr />
-                <div>
-                    <div class="title-loginto">Đăng nhập qua</div>
-                    <div class="loginto">
-                        <button class="signup-fb"><i class="fa fa-facebook" style="font-size:24px"></i></button>
-                        <button class="signip-em"><i class="fa fa-google" style="font-size:24px"></i></button>
-                    </div>
-                </div>
-            </div>
+        <h4>Giới thiệu chung</h4>
+        <hr />
+        <div>
+            <p><strong>MYPHONE</strong> là hệ thống kinh doanh nhượng quyền bán lẻ Smartphone, Phụ kiện chính hãng và sửa chữa dịch vụ, là đối tác của các hãng điện thoại chính hãng lớn tại Việt Nam như: Apple, Samsung, Oppo, Realme, Vivo, VSmart, Xiaomi,
+                Asus…
+            </p>
+            <p>Hệ thống bán lẻ <strong>MYPHONE</strong> hiện có trụ sở chính tại địa chỉ: Phường Thịnh Quang, Quận Đống Đa, tp Hà Nội và chi nhánh Quận 4, tp Hồ Chí Minh</p>
+            <p>Thành lập từ năm 2012, trải qua hơn 7 năm phát triển, <strong>MYPHONE</strong> đã trở thành điểm đến quen thuộc của khách hàng yêu công nghệ trên toàn quốc với các sản phẩm điện thoại, máy tính bảng, Smartphone chính hãng uy tín chất lượng.
+                Thời điểm hiện tại hệ thống đã có 17 cửa hàng nhượng quyền + 4 trung tâm bảo hành trải dài khắp toàn quốc tạo sự thuận tiện cho khách hàng.</p>
         </div>
-        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <span class="title-modal" id="exampleModalLongTitle">Đăng Ký</span>
-                    </div>
-                    <div class="modal-body">
-                        <div id="app2">
-                            <form action="#" method="POST" novalidate="true" @submit="testdata2">
-                                <div class="txt-input">
-                                    <label for="txtphone">Nhập số điện thoại</label>
-                                    <input type="text" id="txtphone" name="txtphone" v-model="txtphone">
-                                    <div v-if="displaybug()">
-                                        <small v-for="error3 in errors3">{{error3}}</small>
-                                    </div>
-                                </div>
-                                <div class="txt-input">
-                                    <label for="txtpwd1">Nhập mật khẩu</label>
-                                    <input type="password" id="txtpwd1" name="txtpwd1" v-model="txtpwd1">
-                                    <div v-if="displaybug()">
-                                        <small v-for="error4 in errors4">{{error4}}</small>
-                                    </div>
-                                </div>
-                                <div class="txt-input">
-                                    <label for="txtpwd2">Nhập lại mật khẩu</label>
-                                    <input type="password" id="txtpwd2" name="txtpwd2" v-model="txtpwd2">
-                                    <div v-if="displaybug()">
-                                        <small v-for="error5 in errors5">{{error5}}</small>
-                                    </div>
-                                </div>
-                                <div class="btn-modal-signup">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
-                                    <button type="submit" class="btn btn-primary">Đăng ký</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div>
+            <p><strong><i>Quyền lợi khi được tham gia nhượng quyền:</i></strong></p>
+            <ul>
+                <li>Ít rủi ro bởi các sản phẩm, dịch vụ của <strong>MYPHONE</strong> đều đã khẳng định được chất lượng, uy tín</li>
+                <li>Được chuyển giao và đảm bảo các vấn đề xây dựng chiến lược quảng bá, tiếp thị, đào tạo, tận dụng nguồn nhân lực có sẵn 1 cách tối đa. Các quy trình vận hành đều sẽ được <strong>MYPHONE</strong> hỗ trợ và chuyển giao. Cửa hàng nhượng quyền
+                    chỉ cần tập trung cho việc bán hàng.
+                </li>
+                <li>Được sử dụng thương hiệu uy tín của <strong>MYPHONE</strong> trong lĩnh vực bán lẻ điện thoại chính hãng đã được khẳng định qua hơn 7 năm phát triển và được khách hàng tin tưởng.
+                </li>
+            </ul>
+            <p><strong><i>Một vài thông tin về công ty:</i></strong></p>
+            <ul>
+                <li>Tên công ty: Công Ty Cổ Phần <strong>MYPHONE</strong></li>
+                <li>Địa chỉ: Việt Nam</li>
+                <li>MST: 0105815888 (Số giấy chứng nhận đăng ký kinh doanh thương nhân</li>
+                <li>Ngày cấp lần đầu: 12/03/2014</li>
+                <li>Đăng ký thay đổi lần 2: 04/11/2013</li>
+                <li>Nơi cấp: Sở kế hoạch và đầu tư thành phố Việt Nam</li>
+            </ul>
+        </div>
+        <p><strong><i>Đồng hành cùng chúng tôi</i></strong></p>
+        <div class="dh-mp">
+            <img src="assets/img/product-2/thgiodidong1.png" alt="">
+            <img src="assets/img/product-2/fpt.png" alt="">
+            <img src="assets/img/product-2/clickbuy.png" alt="">
+            <img src="assets/img/product-2/tải xuống.png" alt="">
         </div>
     </section>
     <footer>
@@ -279,18 +229,15 @@
     <div class="banquyen"><span>Bản Quyền &copy; thuộc về MihKhoa</span></div>
 
     <!-- Liên kết Jquery -->
-    <script src="vender/jquery/jquery.min.js"></script>
+    <script src="vender/jquery/jquery.min.js "></script>
     <!-- Liên kết PopperJS -->
-    <script src="vender/popperjs/popper.min.js"></script>
+    <script src="vender/popperjs/popper.min.js "></script>
     <!-- Liên kết Bootstrap -->
-    <script src="vender/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vender/bootstrap/js/bootstrap.min.js "></script>
     <!-- Custom script - Các file js do mình tự viết -->
-    <script src="assets/js/account.js"></script>
-    <script src="assets/js/index.js"></script>
-
-
-
-
+    <script src="assets/js/index.js "></script>
+    <script src="assets/js/product-index.js"></script>
+    <img src="" alt="">
 </body>
 
 </html>

@@ -211,8 +211,17 @@ section {
     color: #000;
 }
 
-#more {
-    display: none;
+
+/* HOVER */
+
+.border-design:hover {
+    border: 1px solid #b90303ee;
+    border-radius: 5px;
+}
+
+.grid-item_2:hover {
+    border: 1px solid #b90303ee;
+    border-radius: 5px;
 }
 
 
@@ -380,23 +389,39 @@ footer {
     position: fixed;
     left: 0;
     bottom: 35%;
-    opacity: 0.5;
+    opacity: 0.4;
     cursor: pointer;
-}
-
-.txt-input-fb {
-    margin-top: 10px;
-    text-align: center;
 }
 
 .modal-header {
     font-size: 20px;
     font-weight: 600;
-    margin-left: auto;
-    margin-right: auto;
 }
 
-.modal-body {}
+.gopy {
+    width: 55%;
+    margin: auto;
+}
+
+.gopy div {
+    margin-bottom: 10px;
+}
+
+.gopy label {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.gopy input,
+textarea,
+select {
+    border: 1px solid rgb(218, 215, 215);
+}
+
+.btn-modal-fb {
+    margin-top: 10px;
+    float: right;
+}
 
 
 /* === HOVER === */
@@ -420,8 +445,17 @@ footer {
 /* ===== edit repoinsive ===== */
 
 @media (max-width: 1440px) {
+    .navbar-container {
+        width: 80%;
+    }
+    section {
+        width: 80%;
+    }
     .nav-item .title {
         font-size: 14px;
+    }
+    .container-footer {
+        width: 80%;
     }
 }
 
@@ -476,8 +510,11 @@ footer {
     .title-sp {
         margin-top: 10px;
     }
+    .carousel-inner .d-block {
+        min-height: 200px;
+    }
     .banner-mid img {
-        height: 20vh;
+        height: 15vh;
     }
     .banner-product {
         grid-column-start: 1;
